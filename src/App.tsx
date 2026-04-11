@@ -46,29 +46,29 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-background pb-28 text-foreground md:pb-0">
       <AgeVerification onVerify={() => undefined} />
       <Navbar />
 
       {/* --- HERO SECTION --- */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative flex min-h-[680px] items-center justify-center overflow-hidden pt-24 pb-20 sm:min-h-[600px] sm:pt-20 sm:pb-12 md:h-screen">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
             src={`${import.meta.env.BASE_URL}hero-bg.png`}
             alt="Puff and Beyond Smoke Shop" 
-            className="w-full h-full object-cover opacity-60"
+            className="h-full w-full object-cover object-[center_22%] opacity-60 sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05)_0%,transparent_60%)]" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md mb-6"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 backdrop-blur-md"
           >
             <Wind className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold text-primary tracking-widest uppercase">Est. Texas</span>
@@ -78,7 +78,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tight mb-6 text-glow"
+            className="mb-5 text-4xl leading-none font-display font-bold tracking-tight text-white text-glow sm:text-5xl md:text-7xl lg:text-8xl"
           >
             PREMIUM <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-200 to-primary">SMOKE SHOP</span> <br/>
@@ -89,7 +89,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10"
+            className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/75 sm:max-w-2xl sm:text-lg md:text-xl"
           >
             Vapes • Hookah • Premium Glass • Cigars • Accessories
           </motion.p>
@@ -98,18 +98,18 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+            className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
           >
             <a 
               href="#locations" 
-              className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl flex items-center justify-center gap-2 hover-elevate transition-all"
+              className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-bold text-primary-foreground transition-all hover-elevate sm:px-8"
             >
               <MapPin className="w-5 h-5" />
               Get Directions
             </a>
             <a 
               href="tel:+14304350477" 
-              className="px-8 py-4 bg-white/5 text-white border border-white/10 font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-white/10 backdrop-blur-sm transition-all"
+              className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-4 font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10 sm:px-8"
             >
               <Phone className="w-5 h-5" />
               Call Now
@@ -120,10 +120,10 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-16 flex flex-wrap justify-center gap-4 sm:gap-8"
+            className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-16 sm:gap-8"
           >
             {['21+ Only', 'Top Brands', 'Best Prices in Town'].map((badge) => (
-              <div key={badge} className="flex items-center gap-2 text-sm text-white/50 font-medium">
+              <div key={badge} className="flex items-center gap-2 text-xs font-medium text-white/55 sm:text-sm">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                 {badge}
               </div>

@@ -387,7 +387,7 @@ export default function Home() {
                   </div>
                   <div className="text-sm">
                     <p>Mon-Sat: 9:00 AM - 9:00 PM</p>
-                    <p className="text-muted-foreground">Sun: 8:00 AM - 10:00 PM</p>
+                    <p className="text-muted-foreground">Sun: 10:00 AM - 10:00 PM</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-white/80">
@@ -439,7 +439,7 @@ export default function Home() {
                   </div>
                   <div className="text-sm">
                     <p>Mon-Sat: 9:00 AM - 9:00 PM</p>
-                    <p className="text-muted-foreground">Sun: 8:00 AM - 10:00 PM</p>
+                    <p className="text-muted-foreground">Sun: 10:00 AM - 10:00 PM</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-white/80">

@@ -19,6 +19,8 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
+// Keep store hours in sync with the deployed frontend copy used by Vercel.
+
 // --- Animation Variants ---
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },

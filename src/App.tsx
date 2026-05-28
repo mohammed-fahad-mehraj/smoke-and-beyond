@@ -388,7 +388,8 @@ export default function Home() {
                     <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <div className="text-sm">
-                    <p>Mon-Sat: 10:00 AM - 10:00 PM</p>
+                    <p>Mon-Thu: 9:00 AM - 9:00 PM</p>
+                    <p className="text-muted-foreground">Fri-Sat: 9:00 AM - 10:00 PM</p>
                     <p className="text-muted-foreground">Sun: 10:00 AM - 8:00 PM</p>
                   </div>
                 </div>
@@ -440,7 +441,8 @@ export default function Home() {
                     <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <div className="text-sm">
-                    <p>Mon-Sat: 10:00 AM - 10:00 PM</p>
+                    <p>Mon-Thu: 9:00 AM - 9:00 PM</p>
+                    <p className="text-muted-foreground">Fri-Sat: 9:00 AM - 10:00 PM</p>
                     <p className="text-muted-foreground">Sun: 10:00 AM - 8:00 PM</p>
                   </div>
                 </div>

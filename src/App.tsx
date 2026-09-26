@@ -9,6 +9,7 @@ import { AgeVerification } from "./components/AgeVerification";
 import { Navbar } from "./components/Navbar";
 import { MobileBottomBar } from "./components/MobileBottomBar";
 import { Footer } from "./components/Footer";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 
 // --- Form Schema ---
 const contactSchema = z.object({
@@ -49,6 +50,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background pb-28 text-foreground md:pb-0">
+      <AnalyticsTracker />
       <AgeVerification onVerify={() => undefined} />
       <Navbar />
 
@@ -104,6 +106,7 @@ export default function Home() {
           >
             <a 
               href="#locations" 
+              data-analytics-cta="hero_get_directions"
               className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-bold text-primary-foreground transition-all hover-elevate sm:px-8"
             >
               <MapPin className="w-5 h-5" />
@@ -111,6 +114,7 @@ export default function Home() {
             </a>
             <a 
               href="tel:+14304350477" 
+              data-analytics-cta="hero_call_now"
               className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-4 font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10 sm:px-8"
             >
               <Phone className="w-5 h-5" />
@@ -183,7 +187,7 @@ export default function Home() {
                 <div className="p-6 relative z-10 -mt-12">
                   <h3 className="text-2xl font-display font-bold text-white mb-2">{cat.title}</h3>
                   <p className="text-muted-foreground text-sm mb-6">{cat.desc}</p>
-                  <a href="#locations" className="inline-flex items-center gap-2 text-primary font-medium group-hover:text-white transition-colors">
+                  <a href="#locations" data-analytics-cta="product_visit_store" className="inline-flex items-center gap-2 text-primary font-medium group-hover:text-white transition-colors">
                     Visit Store <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
@@ -261,6 +265,7 @@ export default function Home() {
                 
                 <a 
                   href="#locations" 
+                  data-analytics-cta="claim_in_store"
                   className="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl flex items-center justify-center gap-2 border border-white/10 transition-colors"
                 >
                   Claim in Store <ChevronRight className="w-4 h-4" />
@@ -340,6 +345,7 @@ export default function Home() {
           <div className="text-center">
             <a 
               href="https://www.instagram.com/puff_beyond" 
+              data-analytics-cta="instagram_follow"
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all hover:-translate-y-1"
@@ -404,6 +410,7 @@ export default function Home() {
               <div className="flex gap-4">
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=Puff+and+Beyond+Brownsboro+TX" 
+                  data-analytics-cta="brownsboro_directions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 bg-primary text-primary-foreground font-bold rounded-xl text-center hover-elevate"
@@ -412,6 +419,7 @@ export default function Home() {
                 </a>
                 <a 
                   href="tel:+14304350477" 
+                  data-analytics-cta="brownsboro_call"
                   className="py-3 px-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors"
                 >
                   Call
@@ -457,6 +465,7 @@ export default function Home() {
               <div className="flex gap-4">
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=Puff+and+Beyond+Grand+Saline+TX" 
+                  data-analytics-cta="grand_saline_directions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 bg-primary text-primary-foreground font-bold rounded-xl text-center hover-elevate"
@@ -465,6 +474,7 @@ export default function Home() {
                 </a>
                 <a 
                   href="tel:+14304370465" 
+                  data-analytics-cta="grand_saline_call"
                   className="py-3 px-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors"
                 >
                   Call
